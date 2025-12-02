@@ -1,8 +1,9 @@
 var moves = Array.Empty<int>();
 using (var reader = new StreamReader("input")){
-    moves = [..reader.ReadToEnd().Split("\r\n").Select(l =>
-        Convert.ToInt32(l.Substring(1)) * (l.Substring(0, 1) == "L" ? -1 : 1)
-    )];
+    moves = [..
+        reader.ReadToEnd().Split("\r\n")
+        .Select(l => Convert.ToInt32(l.Substring(1)) * (l.Substring(0, 1) == "L" ? -1 : 1))
+    ];
 }
 
 var pointer = 50;
