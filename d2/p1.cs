@@ -12,11 +12,7 @@ long total = 0;
 foreach (var range in ranges) {
     for (long idNumber = range.low; idNumber <= range.high; idNumber++) {
         var id = idNumber.ToString();
-        if (id.Length % 2 != 0) {
-            continue;
-        }
-
-        if (id.Substring(0, id.Length/2) == id.Substring(id.Length/2)) {
+        if (id.Length % 2 == 0 && id.Substring(0, id.Length/2) == id.Substring(id.Length/2)) {
             total += idNumber;
         }
     }
