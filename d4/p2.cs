@@ -3,7 +3,6 @@ using System.Text;
 var input = "";
 using (var reader = new StreamReader("input")){
     input = reader.ReadToEnd();
-    
 }
 
 var lastCount = 0;
